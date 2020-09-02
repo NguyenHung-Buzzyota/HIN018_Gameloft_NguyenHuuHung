@@ -24,7 +24,7 @@ void GSIntro::Init()
 
 	m_logo = std::make_shared<Sprite2D>(model, shader, texture);
 	m_logo->Set2DPosition(screenWidth / 2, screenHeight / 2);
-	m_logo->SetSize(350, 110);
+	m_logo->SetSize(481, 168);
 }
 
 void GSIntro::Exit()
