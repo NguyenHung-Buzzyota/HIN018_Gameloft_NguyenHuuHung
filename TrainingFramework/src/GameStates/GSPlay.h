@@ -1,7 +1,14 @@
 #pragma once
 #include "gamestatebase.h"
 #include "GameButton.h"
-
+#include "Background.h"
+#include "Keyboard.h"
+#include "Dino.h"
+#include "Application.h"
+#include "Check.h"
+#include "player.h"
+#include "Create.h"
+#include "AnimationSprite.h"
 
 class Sprite2D;
 class Sprite3D;
@@ -28,15 +35,23 @@ public:
 	void Update(float deltaTime);
 	void Draw();
 
-	
-	void SetNewPostionForBullet();
 
 private:
 
-	std::shared_ptr<Sprite2D> m_BackGround;
+	
 	std::shared_ptr<Text>  m_score;
-	std::list<std::shared_ptr<GameButton>>	m_listButton;
-	std::vector<std::shared_ptr<Sprite2D>> m_listAnimation;
+	std::list<std::shared_ptr<GameButton>>	BackButton;
+	std::vector<std::shared_ptr<AnimationSprite>> m_listAnimation;
+
+	std::shared_ptr<Player> DinoChar;
+	
+	std::shared_ptr<Create> m_Create;
+	std::shared_ptr<Background> m_Bg1;
+	std::shared_ptr<Background> m_Bg2;
+
+	std::shared_ptr<Keyboard> m_keyB;
+
+	std::shared_ptr<Check> m_check;
 
 };
 

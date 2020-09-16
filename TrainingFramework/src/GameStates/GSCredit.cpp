@@ -28,18 +28,17 @@ void GSCredit::Init()
 	// Button Back
 	texture = ResourceManagers::GetInstance()->GetTexture("back2");
 	std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(screenWidth - 950, screenHeight- 650);
+	button->Set2DPosition(screenWidth - 950, screenHeight - 650);
 	button->SetSize(50, 50);
 	button->SetOnClick([]() {
 		GameStateMachine::GetInstance()->PopState();
 		});
 	m_listButton.push_back(button);
 
-
 	//Credit
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arialbd");
-	TextCredit = std::make_shared< Text>(shader, font, "Game con khung long . Nguyen Huu Hung ", TEXT_COLOR::BLUE, 1.0);
+	TextCredit = std::make_shared< Text>(shader, font, "Game con khung long ", TEXT_COLOR::WHILE, 1.0);
 	TextCredit->Set2DPosition(Vector2(10, 100));
 }
 

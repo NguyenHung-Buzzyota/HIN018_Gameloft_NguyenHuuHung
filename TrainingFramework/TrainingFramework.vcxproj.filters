@@ -16,6 +16,18 @@
     <Filter Include="TrainingFramework\src\GameStates">
       <UniqueIdentifier>{2a875364-1a2b-4ea6-a6fe-716988208916}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TrainingFramework\src\GameObject\Character">
+      <UniqueIdentifier>{355b6eb5-2d2e-417f-aceb-dbcfd97a112f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TrainingFramework\src\GameObject\Enemy">
+      <UniqueIdentifier>{fcce4c81-ec35-4148-88b8-3668993596c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TrainingFramework\src\GameObject\BackGround">
+      <UniqueIdentifier>{140560da-179c-4a98-9d23-227ad8d7bb0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TrainingFramework\src\GameObject\check">
+      <UniqueIdentifier>{99c07e5c-168e-446e-be67-3c0a166f5a8c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp">
@@ -74,6 +86,51 @@
     </ClCompile>
     <ClCompile Include="src\GameObject\AnimationSprite.cpp">
       <Filter>TrainingFramework\src\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\RunState.cpp">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\JumpState.cpp">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\Static.cpp">
+      <Filter>TrainingFramework\src\GameObject\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\Background.cpp">
+      <Filter>TrainingFramework\src\GameObject\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\Keyboard.cpp">
+      <Filter>TrainingFramework\src\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\Dino.cpp">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\Entity.cpp">
+      <Filter>TrainingFramework\src\GameObject\check</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\Check.cpp">
+      <Filter>TrainingFramework\src\GameObject\check</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\Death.cpp">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\idle.cpp">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\player.cpp">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\Enemy.cpp">
+      <Filter>TrainingFramework\src\GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\EnemyManager.cpp">
+      <Filter>TrainingFramework\src\GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\Create.cpp">
+      <Filter>TrainingFramework\src\GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\low.cpp">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +196,57 @@
     </ClInclude>
     <ClInclude Include="src\GameObject\AnimationSprite.h">
       <Filter>TrainingFramework\src\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\RunState.h">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\JumpState.h">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\MCState.h">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\Static.h">
+      <Filter>TrainingFramework\src\GameObject\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\Background.h">
+      <Filter>TrainingFramework\src\GameObject\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\State.h">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\Keyboard.h">
+      <Filter>TrainingFramework\src\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\Dino.h">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\Entity.h">
+      <Filter>TrainingFramework\src\GameObject\check</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\Check.h">
+      <Filter>TrainingFramework\src\GameObject\check</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\Death.h">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\idle.h">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\player.h">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\Enemy.h">
+      <Filter>TrainingFramework\src\GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\EnemyManager.h">
+      <Filter>TrainingFramework\src\GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\Create.h">
+      <Filter>TrainingFramework\src\GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\low.h">
+      <Filter>TrainingFramework\src\GameObject\Character</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

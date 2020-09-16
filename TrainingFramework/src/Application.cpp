@@ -7,6 +7,7 @@ extern GLint screenHeight;
 
 Application::Application()
 {
+	isEndGame = false;
 }
 
 
@@ -23,6 +24,11 @@ void Application::Init()
 
 void Application::Update(GLfloat deltaTime)
 {
+	if (isEndGame)
+	{
+		GameStateMachine::GetInstance()->PopState();
+		isEndGame = false;
+	}
 	GameStateMachine::GetInstance()->PerformStateChange();
 
 	if (GameStateMachine::GetInstance()->HasState())

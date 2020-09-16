@@ -27,7 +27,6 @@ void GSMenu::Init()
 	m_BackGround->SetSize(screenWidth, screenHeight);
 
 	//play button
-	
 	texture = ResourceManagers::GetInstance()->GetTexture("btnplay");
 	std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
 	button->Set2DPosition(screenWidth / 2, 200);
@@ -77,11 +76,12 @@ void GSMenu::Init()
 		});
 	m_listButton.push_back(button);
 
+
 	//text game title
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
-	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("pixelmix");
-	m_Text_gameName = std::make_shared< Text>(shader, font, "Game DINO", TEXT_COLOR::BLACK, 3.0);
-	m_Text_gameName->Set2DPosition(Vector2(screenWidth / 2 , 50));
+	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("pixelmix_bold");
+	m_Text_gameName = std::make_shared< Text>(shader, font, "DINO", TEXT_COLOR::BLUE, 2.0);
+	m_Text_gameName->Set2DPosition(Vector2(screenWidth / 2-50, 100));
 }
 
 void GSMenu::Exit()

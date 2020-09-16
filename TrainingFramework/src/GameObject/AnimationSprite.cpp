@@ -5,15 +5,40 @@
 
 AnimationSprite::AnimationSprite()
 {
+};
+AnimationSprite::AnimationSprite(std::shared_ptr<Models> model, std::shared_ptr<Shaders> shader, std::shared_ptr<Texture> texture, int numFrames, float frameTime):Sprite2D(model, shader, texture), m_numFrames(numFrames), m_frameTime(frameTime), m_currentFrame(0), m_currentTime(0.0f)
+{
 }
-AnimationSprite::AnimationSprite(std::shared_ptr<Models> model, std::shared_ptr<Shaders> shader, std::shared_ptr<Texture> texture, int numFrame, float frameTime) : Sprite2D(model, shader, texture), m_numFrame(numFrame), m_frameTime(frameTime),m_curentFrame(0), m_curentTime(0.0f)
-{}
-
-void AnimationSprite::Init() 
+void AnimationSprite::Init()
 {
 	Sprite2D::Init();
 }
-void AnimationSprite::Draw() 
+GLint AnimationSprite::GetWidth()
+{
+	return m_iWidth;
+}
+GLint AnimationSprite::GetHeight()
+{
+	return m_iHeight;
+}
+Vector2* AnimationSprite::GetPosPtr()
+{
+	return &m_Vec2DPos;
+}
+int	AnimationSprite::GetCurrentFrame()
+{
+	return m_currentFrame;
+}
+int	AnimationSprite::GetNumFrame()
+{
+	return m_numFrames;
+}
+void AnimationSprite::ResetAnimation()
+{
+	m_currentTime = 0.0f;
+	m_currentFrame = 0;
+}
+void AnimationSprite::Draw()
 {
 	glUseProgram(m_pShader->program);
 	glBindBuffer(GL_ARRAY_BUFFER, m_pModel->GetVertexObject());
@@ -31,6 +56,13 @@ void AnimationSprite::Draw()
 		glBindTexture(GL_TEXTURE_2D, m_pTexture->Get2DTextureAdd());
 		if (m_pShader->iTextureLoc[0] != -1)
 			glUniform1i(m_pShader->iTextureLoc[0], 0);
+	}
+	else
+	{
+		iTempShaderVaribleGLID = -1;
+		iTempShaderVaribleGLID = m_pShader->GetUniformLocation((char*)"u_color");
+		if (iTempShaderVaribleGLID != -1)
+			glUniform4f(iTempShaderVaribleGLID, m_Color.x, m_Color.y, m_Color.z, m_Color.w);
 	}
 
 
@@ -51,23 +83,29 @@ void AnimationSprite::Draw()
 	}
 
 	iTempShaderVaribleGLID = -1;
+	iTempShaderVaribleGLID = m_pShader->GetUniformLocation((char*)"u_alpha");
+	if (iTempShaderVaribleGLID != -1)
+		glUniform1f(iTempShaderVaribleGLID, 1.0);
+
+	iTempShaderVaribleGLID = -1;
 	iTempShaderVaribleGLID = m_pShader->GetUniformLocation((char*)"u_matMVP");
 	if (iTempShaderVaribleGLID != -1)
 		glUniformMatrix4fv(iTempShaderVaribleGLID, 1, GL_FALSE, matrixWVP.m[0]);
 
-
 	iTempShaderVaribleGLID = -1;
-	iTempShaderVaribleGLID = m_pShader->GetUniformLocation((char*)"u_numFrame");
+	iTempShaderVaribleGLID = m_pShader->GetUniformLocation((char*)"u_numFrames");
 	if (iTempShaderVaribleGLID != -1)
 	{
-		glUniform1f(iTempShaderVaribleGLID, m_numFrame);
+		glUniform1f(iTempShaderVaribleGLID, m_numFrames);
+		//std::cout << "\n NUMTframe : " << (float)m_numFrames;
 	}
 
 	iTempShaderVaribleGLID = -1;
-	iTempShaderVaribleGLID = m_pShader->GetUniformLocation((char*)"u_curentFrame");
+	iTempShaderVaribleGLID = m_pShader->GetUniformLocation((char*)"u_currentFrame");
 	if (iTempShaderVaribleGLID != -1)
 	{
-		glUniform1f(iTempShaderVaribleGLID, m_curentFrame);
+		glUniform1f(iTempShaderVaribleGLID, m_currentFrame);
+		//std::cout << "\n CURRENTFRAME : " << (float)m_currentFrame;
 	}
 
 	glDrawElements(GL_TRIANGLES, m_pModel->GetNumIndiceObject(), GL_UNSIGNED_INT, 0);
@@ -75,18 +113,43 @@ void AnimationSprite::Draw()
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	glBindTexture(GL_TEXTURE_2D, 0);
-
 }
-void AnimationSprite::Update(GLfloat deltatime)
+void AnimationSprite::Update(GLfloat deltatime) 
 {
-	m_curentTime += deltatime;
-	if (m_curentTime > m_frameTime) 
+	m_currentTime += deltatime;
+	if (m_currentTime > m_frameTime)
 	{
-		m_curentFrame++;
-		if (m_curentFrame == m_numFrame)
+		m_currentFrame++;
+		if (m_currentFrame == m_numFrames)
 		{
-			m_curentFrame = 0;
+			m_currentFrame = 0;
 		}
-		m_curentTime -= m_frameTime;
+		m_currentTime -= m_frameTime;
+	}
+}
+
+void AnimationSprite::Update2(GLfloat deltatime, bool& allowOverFrameStop, bool& isStopAni, int sttFrameStop)
+{
+	m_currentTime += deltatime;
+	if (m_currentTime > m_frameTime) {
+		if (m_currentFrame < m_numFrames - 1)
+		{
+			if (allowOverFrameStop == false)
+			{
+				if (sttFrameStop == 0) sttFrameStop = m_numFrames;
+				if ((m_currentFrame < sttFrameStop - 1))
+				{
+					m_currentFrame++;
+				}
+				else allowOverFrameStop = true;
+
+			}
+			else
+			{
+				m_currentFrame++;
+			}
+		}
+		else isStopAni = true;
+		m_currentTime -= m_frameTime;
 	}
 }

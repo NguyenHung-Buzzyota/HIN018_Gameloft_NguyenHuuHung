@@ -1,5 +1,94 @@
 ﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  GSIntro.cpp
-D:\gameloft\Programming_lesson_06\TrainingFramework\src\GameStates\GSIntro.cpp(26,54): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-D:\gameloft\Programming_lesson_06\TrainingFramework\src\GameStates\GSIntro.cpp(26,36): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-  TrainingFramework.vcxproj -> D:\gameloft\Programming_lesson_06\\BIN-Nvidia\TrainingFramework.exe
+  GSPlay.cpp
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(47,54): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(47,34): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(55,52): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(55,34): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(60,7): error C2371: 'shader': redefinition; different basic types
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(45): message : see declaration of 'shader'
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(69,56): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(69,36): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(78,99): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(78,79): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(79,100): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(79,80): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(81,99): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(81,79): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(82,98): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(82,78): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(85,115): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(85,89): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(92,111): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\gameloft\Programming\TrainingFramework\src\GameStates\GSPlay.cpp(92,85): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  Dino.cpp
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(5): error C2259: 'JumpState': cannot instantiate abstract class
+D:\gameloft\Programming\TrainingFramework\src\GameObject\JumpState.h(5): message : see declaration of 'JumpState'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(5): message : due to following members:
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(5): message : 'void State::Low(void)': is abstract
+D:\gameloft\Programming\TrainingFramework\src\GameObject\State.h(27): message : see declaration of 'State::Low'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(5,29): error C2259: 'JumpState': cannot instantiate abstract class
+D:\gameloft\Programming\TrainingFramework\src\GameObject\JumpState.h(5): message : see declaration of 'JumpState'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(5,29): message : due to following members:
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(5,29): message : 'void State::Low(void)': is abstract
+D:\gameloft\Programming\TrainingFramework\src\GameObject\State.h(27): message : see declaration of 'State::Low'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(6): error C2259: 'DeathState': cannot instantiate abstract class
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Death.h(5): message : see declaration of 'DeathState'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(6): message : due to following members:
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(6): message : 'void State::Low(void)': is abstract
+D:\gameloft\Programming\TrainingFramework\src\GameObject\State.h(27): message : see declaration of 'State::Low'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(6,31): error C2259: 'DeathState': cannot instantiate abstract class
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Death.h(5): message : see declaration of 'DeathState'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(6,31): message : due to following members:
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(6,31): message : 'void State::Low(void)': is abstract
+D:\gameloft\Programming\TrainingFramework\src\GameObject\State.h(27): message : see declaration of 'State::Low'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(7): error C2259: 'IdleState': cannot instantiate abstract class
+D:\gameloft\Programming\TrainingFramework\src\GameObject\idle.h(6): message : see declaration of 'IdleState'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(7): message : due to following members:
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(7): message : 'void State::Low(void)': is abstract
+D:\gameloft\Programming\TrainingFramework\src\GameObject\State.h(27): message : see declaration of 'State::Low'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(7,29): error C2259: 'IdleState': cannot instantiate abstract class
+D:\gameloft\Programming\TrainingFramework\src\GameObject\idle.h(6): message : see declaration of 'IdleState'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(7,29): message : due to following members:
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(7,29): message : 'void State::Low(void)': is abstract
+D:\gameloft\Programming\TrainingFramework\src\GameObject\State.h(27): message : see declaration of 'State::Low'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(8): error C2259: 'RunState': cannot instantiate abstract class
+D:\gameloft\Programming\TrainingFramework\src\GameObject\RunState.h(5): message : see declaration of 'RunState'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(8): message : due to following members:
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(8): message : 'void State::Low(void)': is abstract
+D:\gameloft\Programming\TrainingFramework\src\GameObject\State.h(27): message : see declaration of 'State::Low'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(8,27): error C2259: 'RunState': cannot instantiate abstract class
+D:\gameloft\Programming\TrainingFramework\src\GameObject\RunState.h(5): message : see declaration of 'RunState'
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(8,27): message : due to following members:
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Dino.cpp(8,27): message : 'void State::Low(void)': is abstract
+D:\gameloft\Programming\TrainingFramework\src\GameObject\State.h(27): message : see declaration of 'State::Low'
+  Create.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory(230,1): error C2664: 'EnemyManager::EnemyManager(const EnemyManager &)': cannot convert argument 1 from '_Ty' to 'const EnemyManager &'
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory(230,1): message : Reason: cannot convert from '_Ty' to 'const EnemyManager'
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory(230,1): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+D:\gameloft\Programming\TrainingFramework\src\GameObject\EnemyManager.h(17,1): message : see declaration of 'EnemyManager::EnemyManager'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory(1428): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,int>(_Ty &,int &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=EnemyManager
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory(2072): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<int>(int &&)' being compiled
+          with
+          [
+              _Ty=EnemyManager
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory(2072): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<int>(int &&)' being compiled
+          with
+          [
+              _Ty=EnemyManager
+          ]
+D:\gameloft\Programming\TrainingFramework\src\GameObject\Create.cpp(5): message : see reference to function template instantiation 'std::shared_ptr<EnemyManager> std::make_shared<EnemyManager,int>(int &&)' being compiled
+  Check.cpp
+  Generating Code...

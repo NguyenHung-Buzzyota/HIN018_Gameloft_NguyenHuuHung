@@ -5,13 +5,22 @@ class AnimationSprite : public Sprite2D
 {
 public:
 	AnimationSprite();
-	AnimationSprite(std::shared_ptr<Models> model, std::shared_ptr<Shaders> shader, std::shared_ptr<Texture> texture, int numFrame,float frameTime);
+	AnimationSprite(std::shared_ptr<Models> model, std::shared_ptr<Shaders> shader, std::shared_ptr<Texture> texture, int numFrames, float frameTime);
+
 	void		Init() override;
 	void		Draw() override;
 	void		Update(GLfloat deltatime) override;
+	void		Update2(GLfloat deltatime, bool& isOnFrameStop, bool& isStopAni, int sttFrameStop);
+	void		ResetAnimation();
+
+	GLint		GetWidth();
+	GLint		GetHeight();
+	Vector2* GetPosPtr();
+	int			GetCurrentFrame();
+	int			GetNumFrame();
 protected:
-	int m_numFrame;
+	int m_numFrames;
 	float m_frameTime;
-	int m_curentFrame;
-	float m_curentTime;
+	int m_currentFrame;
+	float m_currentTime;
 };

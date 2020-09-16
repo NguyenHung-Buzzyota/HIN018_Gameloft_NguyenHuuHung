@@ -2,10 +2,10 @@
 #include "GSIntro.h"
 #include "GSMenu.h"
 */
-#include "GSCredit.h"
 #include "GSPlay.h"
 #include "GSIntro.h"
 #include "GSMenu.h"
+#include "GSCredit.h"
 
 #include "GameStatebase.h"
 
